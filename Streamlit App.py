@@ -42,7 +42,7 @@ def preprocess_text(text):
     text = text.replace('reuters', '')
     
     # tokenize text
-    basic_token_pattern = r"(?u)\b([a-zA-Z]{3,}|\d{4,})\b"
+    basic_token_pattern = r"\b[a-zA-Z]{3,}\b"
     tokenizer = RegexpTokenizer(basic_token_pattern)
     stopwords_list = stopwords.words('english')
     text = tokenizer.tokenize(text)
@@ -68,7 +68,7 @@ def preprocess_text(text):
     wordnet_tagged = list(map(lambda x: (x[0], pos_tagger(x[1])), pos_tag(text))) 
     
     # lemmatizes each token based on part of speech in tuple
-    doc = [wnl.lemmatize(token, pos) for token, pos in wordnet_tagged if pos is not None]
+    text = [wnl.lemmatize(token, pos) for token, pos in wordnet_tagged if pos is not None]
     
     return text
 
