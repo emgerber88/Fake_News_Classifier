@@ -45,7 +45,7 @@ After processing my data, I tried four different models: a naive Bayes, a logist
 Once I selected my final model, I generated predictions for every article in the dataset and compared the word clouds of the most commonly occurring words for true positives (correctly predicted fake news), true negatives (correctly predicted real news), false positives (news the model predicted was fake, but was actually real), and false negatives (the opposite). I also compared which words were most commonly assigned the highest TF-IDF weight for their document.
 
 ## Streamlit App
-I build a simple Streamlit app that allows a user to paste the contents of an article into a text area and generate a prediction about whether the article is real or fake news based on its contents. The app works fine on data it was trained on (mostly about US politics and world news), but is largely unreliable due to the very narrow scope of its training data. It would be more useful with a larger training set - but for now, it's fun to experiment.
+I built a simple Streamlit app that allows a user to paste the contents of an article into a text area and generate a prediction about whether the article is real or fake news based on its contents. The app works fine on data it was trained on (mostly about US politics and world news), but is largely unreliable due to the very narrow scope of its training data. It would be more useful with a larger training set - but for now, it's fun to experiment.
 
 ## Conclusions and Next Steps
 
